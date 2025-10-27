@@ -24,12 +24,30 @@ let acceptingAnswers = true;
 let questions = [];
 
 //fetching the questions from questions.json
-fetch('./questions.json').then(res => {
+fetch('https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple').then(res => {
     console.log(res)
     return res.json()
 }).then(loaddedQuestions => {
-    console.log(loaddedQuestions)
-    questions = loaddedQuestions
+    console.log(loaddedQuestions.results)
+    questions = loaddedQuestions.results.map( (loaddedQuestion) => {
+        const formatedQuestion = {
+            question: loaddedQuestion.question
+            
+        }
+        const answerChoices = [...loaddedQuestion.incorrect_answers];
+        formatedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+        answerChoices.splice(
+            formatedQuestion.answer - 1, 0, loaddedQuestion.correct_answer
+        );
+
+        answerChoices.forEach((choice, index) => {
+            formatedQuestion['choice' + (index + 1)] = choice;
+        });
+
+        return formatedQuestion;
+    
+    });
+  
     startGame()
 }).catch((err) => {
     console.error(err)
@@ -106,7 +124,7 @@ choices.forEach((choice) => {
         const selectedAnswer = selectedChoice.dataset['number'];
        
 
-         let classToApply = selectedAnswer === currentQuestion.Answer ? 'correct' : 'incorrect';
+         let classToApply = selectedAnswer === currentQuestion.answer ? 'correct' : 'incorrect';
         if(classToApply === 'correct') {
             increaseScore(SCORE_BONUS)
         }
