@@ -4,7 +4,7 @@
         "choice2": 4,
         "choice3": 5,
         "choice4": 7,
-        "Answer": "2"
+        "Answer": 2
     }
 ,
     {
@@ -13,7 +13,7 @@
         "choice2": 4,
         "choice3": 5,
         "choice4": 7,
-        "Answer": "3"
+        "Answer": 3
     },
     {
         "question": "what is 2 + 5?",
@@ -21,7 +21,7 @@
         "choice2": 4,
         "choice3": 5,
         "choice4": 7,
-        "Answer": "4"
+        "Answer": 4
     },
 
     {
@@ -30,5 +30,5 @@
         "choice2": 4,
         "choice3": 5,
         "choice4": 7,
-        "Answer": "1"
+        "Answer": 1
     } ]

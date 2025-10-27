@@ -24,7 +24,7 @@ let acceptingAnswers = true;
 let questions = [];
 
 //fetching the questions from questions.json
-fetch('https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=multiple').then(res => {
+fetch('https://opentdb.com/api.php?amount=50&category=9&type=multiple').then(res => {
     console.log(res)
     return res.json()
 }).then(loaddedQuestions => {
