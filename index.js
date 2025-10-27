@@ -21,42 +21,19 @@ let acceptingAnswers = true;
 
 
 
-let questions = [
-    {
-        question: 'what is 2 + 2?',
-        choice1: '3',
-        choice2: '4',
-        choice3: '5',
-        choice4: '7',
-        Answer: '2'
-    },
-    {
-        question: 'what is 2 + 3?',
-        choice1: '3',
-        choice2: '4',
-        choice3: '5',
-        choice4: '7',
-        Answer: '3'
-    },
-    {
-        question: 'what is 2 + 5?',
-        choice1: '3',
-        choice2: '4',
-        choice3: '5',
-        choice4: '7',
-        Answer: '4'
-    },
+let questions = [];
 
-    {
-        question: 'what is 2 + 1?',
-        choice1: '3',
-        choice2: '4',
-        choice3: '5',
-        choice4: '7',
-        Answer: '1'
-    }
-
-]
+//fetching the questions from questions.json
+fetch('./questions.json').then(res => {
+    console.log(res)
+    return res.json()
+}).then(loaddedQuestions => {
+    console.log(loaddedQuestions)
+    questions = loaddedQuestions
+    startGame()
+}).catch((err) => {
+    console.error(err)
+})
 
 
 const SCORE_BONUS = 10;
@@ -157,7 +134,7 @@ const increaseScore = (num) => {
 
 
 
-startGame();
+
 
 
 
