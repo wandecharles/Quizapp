@@ -21,11 +21,11 @@ let acceptingAnswers = true;
 
 
 
-function decodeHTML(html) {
-    const txt = document.createElement('textarea');
-    txt.innerHTML = html;
-    return txt.value;
-}
+// function decodeHTML(html) {
+//     const txt = document.createElement('textarea');
+//     txt.innerHTML = html;
+//     return txt.value;
+// }
 
 
 
@@ -42,7 +42,7 @@ fetch('https://opentdb.com/api.php?amount=50&category=9&type=multiple').then(res
     questions = loaddedQuestions.results.map( (loaddedQuestion) => {
         const formatedQuestion = {
             //decoding html tags from questions 
-            question: decodeHTML(loaddedQuestion.question)
+            question: loaddedQuestion.question
             
         }
         const answerChoices = [...decodeHTML(loaddedQuestion.incorrect_answers)];
@@ -104,12 +104,12 @@ const getNewQuestion = () => {
      currentQuestion = availableQuestions[questionIndex];
 
      //displaing the curent question that has been selected by the random method in our game.html question div
-     question.innerText = decodeHTML(currentQuestion.question);
+     question.innerText = currentQuestion.question;
      console.log(question.innerText);
 
      choices.forEach((choice) => {
         const number = choice.dataset['number']
-        choice.innerText = decodeHTML(currentQuestion['choice' + number])
+        choice.innerText = currentQuestion['choice' + number]
         
      })
 
