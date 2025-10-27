@@ -55,7 +55,7 @@ fetch('https://opentdb.com/api.php?amount=50&category=9&difficulty=easy&type=mul
 
 
 const SCORE_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 45;
 
 
 const startGame = () => {
