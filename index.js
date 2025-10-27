@@ -45,10 +45,10 @@ fetch('https://opentdb.com/api.php?amount=50&category=9&type=multiple').then(res
             question: loaddedQuestion.question
             
         }
-        const answerChoices = [...decodeHTML(loaddedQuestion.incorrect_answers)];
+        const answerChoices = [...loaddedQuestion.incorrect_answers];
         formatedQuestion.answer = Math.floor(Math.random() * 4) + 1;
         answerChoices.splice(
-            formatedQuestion.answer - 1, 0,  decodeHTML(loaddedQuestion.correct_answer)
+            formatedQuestion.answer - 1, 0,  loaddedQuestion.correct_answer
         );
 
         answerChoices.forEach((choice, index) => {
