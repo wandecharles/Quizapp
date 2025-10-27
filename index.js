@@ -31,7 +31,8 @@ fetch('https://opentdb.com/api.php?amount=50&category=9&type=multiple').then(res
     console.log(loaddedQuestions.results)
     questions = loaddedQuestions.results.map( (loaddedQuestion) => {
         const formatedQuestion = {
-            question: loaddedQuestion.question
+            //decoding html tags from questions 
+            question: decodeHTML(loaddedQuestion.question)
             
         }
         const answerChoices = [...loaddedQuestion.incorrect_answers];
