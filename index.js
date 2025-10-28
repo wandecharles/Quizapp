@@ -20,7 +20,7 @@ let score = 0
 let acceptingAnswers = true;
 question.innerText = "Failed to load questions 😥";
 choices.forEach((choice) => {
-    choices.textContent = "Loading...";
+    choices.innerText = "Loading...";
 })
 
 
