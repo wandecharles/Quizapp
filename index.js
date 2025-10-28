@@ -18,10 +18,14 @@ let currentQuestion = {}
 let availableQuestions = []
 let score = 0
 let acceptingAnswers = true;
-question.innerText = "Failed to load questions 😥";
-choices.forEach((choice) => {
-    choices.innerText = "Loading...";
-})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    question.innerText = "Failed to load questions 😥";
+    choices.forEach(choice => {
+        choice.innerText = "Loading...";
+    });
+});
 
 
 
