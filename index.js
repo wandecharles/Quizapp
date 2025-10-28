@@ -7,7 +7,7 @@ const question = document.getElementById('question')
 //connect a dom to the choices for display
 const choices = Array.from(document.querySelectorAll('.choice-text'))
 //connect a dom to the progressText for updating the game.html hud progress text
-const progressText = document.getElementById('progressText')
+const progressText = document.getElementById('progresstext')
 //connect a dom to the progressbar id for updating the game.html UI
 const progressBar = document.getElementById('progressBarFull')
 //connect a dom to save score and updatee user Score
