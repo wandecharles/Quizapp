@@ -21,7 +21,7 @@ let acceptingAnswers = true;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    question.innerText = "Failed to load questions 😥";
+    question.innerText = "Loading Question";
     choices.forEach(choice => {
         choice.innerText = "Loading...";
     });
