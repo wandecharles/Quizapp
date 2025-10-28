@@ -19,6 +19,7 @@ let availableQuestions = []
 let score = 0
 let acceptingAnswers = true;
 question.innerText = "Failed to load questions 😥";
+choices.innerText = "Loading...";
 
 
 
@@ -64,7 +65,7 @@ fetch('https://opentdb.com/api.php?amount=50&category=9&type=multiple').then(res
 }).catch((err) => {
     console.error(err)
     question.innerText = "Failed to load questions 😥";
-    choices.innerText = "Loading...";
+    
 })
 
 
