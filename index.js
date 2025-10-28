@@ -19,12 +19,12 @@ let availableQuestions = []
 let score = 0
 let acceptingAnswers = true;
 
-document.addEventListener("DOMContentLoaded", () => {
-    question.innerText = "Loading Question";
-    choices.forEach(choice => {
-        choice.innerText = "Loading...";
-    });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     question.innerText = "Loading Question";
+//     choices.forEach(choice => {
+//         choice.innerText = "Loading...";
+//     });
+// });
 
 
 
