@@ -19,7 +19,9 @@ let availableQuestions = []
 let score = 0
 let acceptingAnswers = true;
 question.innerText = "Failed to load questions 😥";
-choices.textContent = "Loading...";
+choices.forEach((choice) => {
+    choices.textContent = "Loading...";
+})
 
 
 
