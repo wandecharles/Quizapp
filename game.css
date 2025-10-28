@@ -97,6 +97,10 @@ body {
         min-width: 40rem;
         font-size: 1.5rem;
     }
+    
+    #question {
+    font-size: 1.5rem;
+}
 }
 
 
@@ -105,6 +109,10 @@ body {
         min-width: 20rem;
         font-size: 0.75rem;
     }
+
+    #question {
+    font-size: 0.75rem;
+}
 }
 
 .choice-container.correct {
