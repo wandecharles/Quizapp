@@ -13,7 +13,7 @@ const progressBar = document.getElementById('progressBarFull')
 //connect a dom to save score and updatee user Score
 const ScoreText = document.getElementById('score')
 //exit quiz button
-const exitQuizBtn = document.getElementById('exit');
+const exitQuizBtn = document.getElementById('exitQuizBtn');
 
 let questionCounter = 0;
 let currentQuestion = {}
@@ -180,8 +180,24 @@ const increaseScore = (num) => {
 
 
 exitQuizBtn.addEventListener('click', () => {
-    localStorage.setItem('mostRecentScore', score);
-    return window.location.assign('./end.html');
+
+    //allows the user to confirm if they want to exit
+    const confirmExit = confirm("Are you sure you want to exit? your score will be saved");
+
+    if (confirmExit) {
+        localStorage.setItem('mostRecentScore', score);
+
+        //it will stop the program from acepting answers
+        acceptingAnswers = false;
+        //available questions will be wiped
+        availableQuestions = [];
+
+        //it will redirect the user to the end page
+        window.location.assign('./end.html');
+
+    }
+    
+  
 })
 
 
