@@ -12,6 +12,8 @@ const progressText = document.getElementById('progresstext')
 const progressBar = document.getElementById('progressBarFull')
 //connect a dom to save score and updatee user Score
 const ScoreText = document.getElementById('score')
+//exit quiz button
+const exitQuizBtn = document.getElementById('exit');
 
 let questionCounter = 0;
 let currentQuestion = {}
@@ -175,6 +177,12 @@ const increaseScore = (num) => {
     score += num;
     ScoreText.innerText = score; 
 }
+
+
+exitQuizBtn.addEventListener('click', () => {
+    localStorage.setItem('mostRecentScore', score);
+    return window.location.assign('./end.html');
+})
 
 
 

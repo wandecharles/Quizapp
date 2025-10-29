@@ -138,7 +138,7 @@ h2 {
 }
 
 
-.previous {
+/* .previous {
     font-size: 2.4rem;
     padding: 2rem 0;
     text-align: center;
@@ -149,10 +149,10 @@ h2 {
     background-color: red;
     border-radius: 4px;
 
-}
+} */
 
 
-.previous:hover {
+/* .previous:hover {
     transition: transform 150ms;
     transform: scale(1.03);
     box-shadow: 0 0.4rem 1.4rem 0 rgb(8, 114, 244, 0.6)
@@ -164,13 +164,13 @@ h2 {
     background-color: white;
     color: red; 
 
-}
+} */
 
-.next {
+.exit {
     background: yellow; 
 }
 
-.next:hover {
+.exit:hover {
     background: white;
     color: yellow; 
 }
