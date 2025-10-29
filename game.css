@@ -95,7 +95,7 @@ body {
 @media screen and (max-width: 768px) {
     .choice-container {
         min-width: 40rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     #question {
@@ -107,11 +107,11 @@ body {
 @media screen and (max-width: 480px) {
     .choice-container {
         min-width: 20rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #question {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 }
 
